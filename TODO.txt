@@ -1,0 +1,4 @@
+1. Hamburger menu button to summon menu
+2. Change the layout of the switch buttons 
+3. text needs to be reactive to browser sizing
+4. Set loading screen

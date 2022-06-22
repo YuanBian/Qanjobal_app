@@ -1,0 +1,9 @@
+Where should data be rendered?
+Ideally, we only want to read data when it's necessary.
+For example, when you're on the spanish topic, you should only read in data that's relevant to the spanish topic page (so no english topic should be read)
+
+What should a LANG_MODE page receive?
+A menu (A B C ), a content dictionary (x:y)
+
+1. Changed babel.config.js to babel.config.cjs to make expo work
+2. add "type": "module" in the package.json file

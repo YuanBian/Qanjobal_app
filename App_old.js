@@ -8,10 +8,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 // importing screen components
 import { WelcomeScreen } from './screens/WelcomeScreen';
 import { TopicScreen } from './screens/TopicScreen';
+import { ContentScreen } from './screens/ContentScreen';
 import { GlossaryScreen } from './screens/GlossaryScreen';
-import { TransitionScreen } from './screens/TransitionScreen';
-import { AboutScreen } from './screens/AboutScreen';
-
 const App = () => {
   //const
   const Stack = createStackNavigator();
@@ -25,14 +23,19 @@ const App = () => {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name='TransitionScreen'
-          component={TransitionScreen}
+          name='ContentScreen'
+          component={ContentScreen}
           options={{ headerLeft: (props) => null, headerShown: false }}
         />
         <Stack.Screen
-          name='AboutScreen'
-          component={AboutScreen}
-          options={{ headerShown: true }}
+          name='TopicScreen'
+          component={TopicScreen}
+          options={{ headerLeft: (props) => null, headerShown: false }}
+        />
+        <Stack.Screen
+          name='GlossaryScreen'
+          component={GlossaryScreen}
+          options={{ headerLeft: (props) => null, headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>
