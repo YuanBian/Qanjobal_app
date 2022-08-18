@@ -22,7 +22,7 @@ export const Subitem = ({ subitemData, subitemSetter }) => {
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 20,
+    fontSize: '1.1vw',
     fontWeight: 'bold',
     color: '#b90e0a',
   },

@@ -24,12 +24,25 @@ export const Topic = ({ language, data, subitemState }) => {
         style={{
           flexDirection: 'column',
           flex: 1,
-          // width: '100%',
-          justifyContent: 'space-evenly',
-          gap: '10px',
+          width: '100%',
+          justifyContent: 'space-between',
+          gap: '300px',
         }}
       >
+        <YoutubePlayer
+          webViewStyle={styles.video}
+          height={'30vw'}
+          width={'30vw'}
+          play={true}
+          videoId={'r3ol0OkW50I'}
+        />
         <View style={styles.container}>
+          {/* <Text>{video}</Text>
+          <Text>{qanjobal_transcription}</Text>
+          <Text>{spanish_transcription}</Text>
+          <Text>{english_transcription}</Text>
+          <Text>{english_advice}</Text>
+          <Text>{spanish_advice}</Text> */}
           <Text>
             Chi wochej chi wiaj teq junoq tx’an un b’ay snahil unejChi wochej
             chi wiaj teq junoq tx’an un b’ay snahil unejChi wochej chi wiaj teq
@@ -84,13 +97,14 @@ const styles = StyleSheet.create({
     color: 'red',
   },
   container: {
-    top: '5em',
     alignItems: 'center',
-    flexDirection: 'column',
-    flex: 1,
-    justifyContent: 'space-evenly',
-    gap: '10px',
-    backgroundColor: 'red',
+    justifyContent: 'center',
+    // backgroundColor: '#eee',
+    flex: 0,
+    backgroundColor: '#FFF',
+    position: 'absolute',
+    left: '0em',
+    width: '30%',
   },
   video: { flex: 1, width: '100%', justifyContent: 'center' },
   contentContainer: {

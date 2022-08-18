@@ -1,12 +1,20 @@
 import React from 'react';
 import { Button, Divider, Menu, Provider } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
-import { SafeAreaView, StyleSheet, Text, View, ScrollView } from 'react-native';
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  Image,
+} from 'react-native';
 import { MenuItem } from '../components/MenuItem';
 import { Topic } from '../components/Topic';
 import { Glossary } from '../components/Glossary';
 import { useState, useEffect } from 'react';
 import YoutubePlayer from 'react-native-youtube-iframe';
+import { color } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
 export const ContentScreen = ({ params }) => {
   const navigation = useNavigation();
@@ -97,7 +105,15 @@ export const ContentScreen = ({ params }) => {
   const renderButton = () => {
     return (
       <View style={styles.container}>
-        <View style={{ flex: 1, width: '100%' }}>
+        <View
+          style={{
+            flexDirection: 'column',
+            flex: 1,
+            width: '100%',
+            justifyContent: 'space-between',
+            gap: '10px',
+          }}
+        >
           <Button mode='contained' onPress={switch_mode}>
             {switch_mode_button_text(language, mode)}
           </Button>
@@ -213,6 +229,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     color: 'black',
     position: 'absolute',
+    // fontSize: 17,
     // backgroundColor: '#996633',
   },
   showButton: {

@@ -34,7 +34,7 @@ export const MenuItem = ({ menuData, subitemSetter }) => {
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: '1.5vw',
+    fontSize: '1.2vw',
     fontWeight: 'bold',
     color: '#000',
     alignItems: 'center',
